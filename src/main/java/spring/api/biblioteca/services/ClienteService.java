@@ -5,7 +5,6 @@ import spring.api.biblioteca.entities.Cliente;
 import spring.api.biblioteca.repositories.ClienteRepository;
 
 import java.util.List;
-import java.util.NoSuchElementException;
 
 @Service
 public class ClienteService {
