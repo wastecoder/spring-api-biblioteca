@@ -34,11 +34,11 @@ public class ClienteController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Cliente> buscarCliente(@PathVariable Long id) {
+    public ResponseEntity<?> buscarCliente(@PathVariable Long id) {
         Cliente clienteRetornado = clienteService.buscarClienteId(id);
 
         if (clienteRetornado == null) {
-            return ResponseEntity.notFound().build();
+            return retornarClienteNaoEncontrado();
         }
 
         return ResponseEntity.ok().body(clienteRetornado);

@@ -43,7 +43,7 @@ public class AutorController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<?> atualizarCliente(@PathVariable Long id, @RequestBody @Valid AutorDto autorAtualizado) {
+    public ResponseEntity<?> atualizarAutor(@PathVariable Long id, @RequestBody @Valid AutorDto autorAtualizado) {
         Autor retorno = autorService.atualizarAutor(id, autorAtualizado.dtoParaAutor());
 
         if (retorno == null) return retornarAutorNaoEncontrado();
@@ -52,7 +52,7 @@ public class AutorController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> deletarCliente(Long id) {
+    public ResponseEntity<?> deletarAutor(Long id) {
         if (autorService.deletarAutorId(id)) {
             return ResponseEntity.noContent().build();
         }
