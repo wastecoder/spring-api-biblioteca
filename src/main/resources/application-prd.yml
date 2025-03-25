@@ -8,7 +8,7 @@ spring:
     show-sql: true
     open-in-view: false
     hibernate:
-      ddl-auto: create #Na primeira execução precisa ser create
+      ddl-auto: validate #Depois da primeira execução precisa ser validate
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
